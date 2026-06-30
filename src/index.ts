@@ -39,6 +39,18 @@ if (process.argv.includes('manage')) {
   process.exit(0);
 }
 
+if (process.argv.includes('install')) {
+  const { runInstaller } = await import('./installer/index.js');
+  await runInstaller();
+  process.exit(0);
+}
+
+if (process.argv.includes('uninstall')) {
+  const { runUninstaller } = await import('./installer/index.js');
+  await runUninstaller();
+  process.exit(0);
+}
+
 const server = new Server(
   {
     name: 'mcmodding-mcp',
