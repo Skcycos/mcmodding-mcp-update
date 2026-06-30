@@ -9,9 +9,11 @@
 
 import { AgentTarget, DetectionResult, InstallLocation } from './types.js';
 import { claudeTarget } from './claude.js';
+import { codexTarget } from './codex.js';
 import { cursorTarget } from './cursor.js';
+import { geminiTarget } from './gemini.js';
 
-export const ALL_TARGETS: AgentTarget[] = [claudeTarget, cursorTarget];
+export const ALL_TARGETS: AgentTarget[] = [claudeTarget, cursorTarget, codexTarget, geminiTarget];
 
 export function getTarget(id: string): AgentTarget | undefined {
   return ALL_TARGETS.find((t) => t.id === id);
