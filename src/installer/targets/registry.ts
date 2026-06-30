@@ -10,15 +10,19 @@
 import { AgentTarget, DetectionResult, InstallLocation } from './types.js';
 import { claudeTarget } from './claude.js';
 import { codexTarget } from './codex.js';
+import { continueTarget } from './continue.js';
 import { cursorTarget } from './cursor.js';
 import { geminiTarget } from './gemini.js';
+import { kiroTarget } from './kiro.js';
 import { opencodeTarget } from './opencode.js';
 
 export const ALL_TARGETS: AgentTarget[] = [
   claudeTarget,
   cursorTarget,
   codexTarget,
+  continueTarget,
   geminiTarget,
+  kiroTarget,
   opencodeTarget,
 ];
 
