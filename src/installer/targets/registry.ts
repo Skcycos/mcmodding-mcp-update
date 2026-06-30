@@ -12,8 +12,15 @@ import { claudeTarget } from './claude.js';
 import { codexTarget } from './codex.js';
 import { cursorTarget } from './cursor.js';
 import { geminiTarget } from './gemini.js';
+import { opencodeTarget } from './opencode.js';
 
-export const ALL_TARGETS: AgentTarget[] = [claudeTarget, cursorTarget, codexTarget, geminiTarget];
+export const ALL_TARGETS: AgentTarget[] = [
+  claudeTarget,
+  cursorTarget,
+  codexTarget,
+  geminiTarget,
+  opencodeTarget,
+];
 
 export function getTarget(id: string): AgentTarget | undefined {
   return ALL_TARGETS.find((t) => t.id === id);
